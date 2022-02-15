@@ -30,6 +30,6 @@ class Checkout
         @total += price if name == item
       end
     end
-    @total
+    "£#{@total}"
   end
 end
