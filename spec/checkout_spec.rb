@@ -5,7 +5,9 @@ describe Checkout do
 
   describe "#price" do
     it "should show prices of each item" do
-      expect(subject.price).to eq 2
+      expect(subject.price("milk")).to eq 2
     end 
+
+
   end
 end

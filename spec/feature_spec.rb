@@ -4,7 +4,7 @@ describe Checkout do
   # So I know how much an item costs
   # I would like to be able to see its price
     it "should show prices of each item" do
-      expect(subject.price(milk)).to eq 2
+      expect(subject.price("milk")).to eq 2
     end 
   # As a shopper
   # So that I can buy an item
