@@ -10,9 +10,10 @@ describe Checkout do
       expect(subject.price("milk")).to eq 2
     end 
 
-    # it "should return message if item not in grocery store" do
-    #   expect{ subject.price("shampoo") }.to raise_error("Item not available")
-    # end 
+    it "raise error if item not in grocery list" do
+      expect{ subject.price("ice") }.to raise_error("Item not available")
+    end
+
   end
 
   describe "#scan" do

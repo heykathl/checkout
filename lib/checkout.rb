@@ -17,6 +17,10 @@ class Checkout
     GROCERIES.each do |name, price|
       return price if name == item
     end
+
+    GROCERIES.each do |name, price|
+      raise "Item not available" if name != item
+    end
   end
 
   def scan(item)
