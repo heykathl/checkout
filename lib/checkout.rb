@@ -10,6 +10,7 @@ class Checkout
   
   def initialize
     @order = []
+    @total = 0
   end
   
   def price(item)
@@ -21,5 +22,14 @@ class Checkout
   def scan(item)
     @order << item
     return @order.join(", ")
+  end
+
+  def complete
+    GROCERIES.each do |name, price|
+      @order.each do |item|
+        @total += price if name == item
+      end
+    end
+    @total
   end
 end

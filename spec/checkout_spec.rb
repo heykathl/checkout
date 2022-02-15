@@ -28,4 +28,14 @@ describe Checkout do
       expect(subject.scan("bread")).to eq "milk, bread"
     end
   end
+
+  describe "complete" do
+    it { is_expected.to respond_to(:complete) }
+
+    it "should return order total" do
+      subject.scan("milk")
+      subject.scan("bread")
+      expect(subject.complete).to eq 5
+    end
+  end
 end
